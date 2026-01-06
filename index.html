@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致我们的实习老师</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 身份选择页 -->
+        <div class="identity-page" id="identityPage">
+            <div class="title-card">
+                <h1>👋 身份选择</h1>
+                <p>输入数字，开启专属聊天</p>
+            </div>
+            <div class="input-group">
+                <input type="text" id="identityInput" placeholder="1 = 老师 | 2 = 学生" maxlength="1">
+                <button onclick="confirmIdentity()" class="confirm-btn">确认 <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- 聊天页面 -->
+        <div class="chat-page" id="chatPage" style="display: none;">
+            <!-- 聊天头部 -->
+            <div class="chat-header">
+                <div class="header-left">
+                    <img src="" alt="" class="avatar" id="headerAvatar">
+                    <span class="identity-text" id="identityText"></span>
+                </div>
+                <i class="fas fa-comment-dots"></i>
+            </div>
+
+            <!-- 聊天消息区 -->
+            <div class="chat-messages" id="chatMessages">
+                <!-- 仅保留系统提示，无自动消息 -->
+                <div class="system-message">
+                    <p>想说的话，都可以在这里告诉对方 💌</p>
+                </div>
+            </div>
+
+            <!-- 输入区 -->
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="输入想说的话...">
+                <button onclick="sendMessage()" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
